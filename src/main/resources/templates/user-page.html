@@ -53,7 +53,7 @@
             </h3>
             <div class="border rounded-bottom p-4 bg-white ">
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm table-hover">
+                    <table class="table table-striped table-sm table-hover" id="userTable">
                         <thead>
                         <tr>
                             <th class="py-3">ID</th>
@@ -62,7 +62,7 @@
                             <th class="py-3">Role</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="userTableBody">
                         <tr>
                             <td th:text="${user.getId()}" class="align-middle"></td>
                             <td th:text="${user.getUsername()}" class="align-middle"></td>
@@ -80,5 +80,7 @@
 <div th:replace="fragments/script1 :: script1"></div>
 <div th:replace="fragments/script2 :: script2"></div>
 <div th:replace="fragments/script3 :: script3"></div>
+
+<script src="../static/GetUser.js"></script>
 </body>
 </html>
